@@ -1,0 +1,80 @@
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2>crear cuenta</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="'/home/one'">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">crear cuenta</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb End -->
+<!-- section start -->
+<section class="register-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>crear cuenta</h3>
+                <div class="theme-card">
+                    <form class="theme-form" ngNativeValidate [formGroup]="forma" (ngSubmit)="register()">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="email">Nombre</label>
+                                <input type="text" class="form-control" id="fname" formControlName="fname" name="fname" placeholder="Nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Apellido</label>
+                                <input type="text" class="form-control" id="lname" formControlName="lname" id="lname" placeholder="Apellido" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" formControlName="email" name="email" placeholder="Su correo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Repitir Correo</label>
+                                <input type="email" class="form-control" id="repet" formControlName="repet" name="repet" placeholder="Repita el correo" required>
+                            </div>
+                        </div>
+                        <div class="form-group" *ngIf="forma.errors?.emails && !forma.pristine">
+                            <p class="text-danger">Los correos deben ser iguales</p>
+                        </div>
+                        <div class="form-row">
+                                <div class="col-md-6">
+                                    <label for="email">Contraseña</label>
+                                    <input type="password" class="form-control" id="pass" formControlName="pass" name="pass" placeholder="Contraseña" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Repetir Contraseña</label>
+                                <input type="password" class="form-control" id="two" formControlName="two" name="two" placeholder="Repita su contraseña" required>
+                            </div>
+                            <div class="form-group" *ngIf="forma.errors?.equal && !forma.pristine">
+                                <p class="text-danger">Las contraseñas deben ser iguales</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkbox checkbox-primary p-t-0">
+                                    <input formControlName="cond" name="cond" type="checkbox" id="checkbox-signup cond">
+                                    <label for="checkbox-signup" style="margin-left: 5px;">Estoy de acuerdo con los Términos de uso y Políticas de privacidad.</label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-solid" type="submit">Crear Cuenta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Section ends-->

@@ -1,0 +1,40 @@
+<!-- Home slider -->
+<section class="p-0">
+    <ngx-slick-carousel class="home-slider" #slickModal="slick-carousel" [config]="sliderConfig">
+        <div ngxSlickItem>
+            <div class="home home34">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="slider-contain">
+                                <div>
+                                    <h4>¡Bienvenido a DTurismo!</h4>
+                                    <h1>Los mejores viajes</h1>
+                                    <a [routerLink]="'/home/left-sidebar/collection/beauty'" class="btn btn-solid">Compra ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ngxSlickItem>
+            <div class="home home35">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="slider-contain">
+                                <div>
+                                    <h4>Un total 30% de descuento</h4>
+                                    <h1>Los mejores viajes</h1>
+                                    <a [routerLink]="'/home/left-sidebar/collection/beauty'" class="btn btn-solid">Compra ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+</section>
+<!-- Home slider end -->

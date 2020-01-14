@@ -1,0 +1,53 @@
+<!-- parallax section start -->
+<section class="full-banner parallax-banner21 parallax small-slider tools-parallax-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="tools-description">
+                    <div>
+                        <h3>Selecciona tu detsino</h3>
+                        <div class="tools-form">
+                            <div class="search-box">
+                                <select  class="form-control">
+                                    <option value="">Selecciona continente</option>
+                                    <option value="1">América</option>
+                                    <option value="2">Europa</option>
+                                    <option value="3">África</option>
+                                    <option value="4">Asia</option>
+                                    <option value="5">Oceanía</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                <select name="model"  class="form-control">
+                                    <option value="">Selecciona País</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                <select name="engine"  class="form-control">
+                                    <option value="">Selecciona la cagetogía</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                <select name="year" class="form-control">
+                                    <option value="">Selecciona la fecha</option>
+                                </select>
+                            </div>
+                            <div class="search-button">
+                                <a href="#" class="btn btn-solid btn-find">Encontrar tu viaje</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-12 tools-grey">
+                <ngx-slick-carousel class="tools-product-4 product-m" #slickModal="slick-carousel" [config]="productSlideConfig">
+                  <div ngxSlickItem class="product-box product-wrap" *ngFor="let product of products | slice:0:16">
+                     <app-product-box-hover [product]="product"></app-product-box-hover>
+                  </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- parallax section end -->
