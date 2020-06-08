@@ -14,7 +14,7 @@ export const MENUITEMS: Menu[] = [
 		path: '/', title: 'inicio', type: 'link'
 	},
 	{
-		path: '/home/left-sidebar/collection/all', title: 'tours', type: 'link'
+		path: '/home/right-sidebar/collection/all', title: 'tours', type: 'link'
 	},
 	{
 		path: '/pages/about-us', title: 'sobre nosotros', type: 'link'
